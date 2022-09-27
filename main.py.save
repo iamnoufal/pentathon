@@ -1,0 +1,10 @@
+from Flask import flask
+
+app = Flask(__name__)
+app.config['SQLALCHEMY_DATABASE_URI'] = "sqlite:///" + os.path.join(current_dir, "db.sqlite3")
+@app.route("/")
+def home():
+  return "<h4>Hello World</h4><p>How are you?</p>"
+
+if __name__=="__main__":
+  app.run(host="0.0.0.0", debug=True, port=1234)
