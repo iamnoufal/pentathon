@@ -18,9 +18,14 @@ def home():
   a.user_id = "Noufal"
   a.name = "Noufal"
   a.pwd="password"
-  print(a, "------------===============------------")
   db.session.add(a)
   db.session.commit()
+  # a = Complaint()
+  # a.assigned_to = db.session.query(Employee).first().id
+  # db.session.add(a)
+  # a = db.session.query(Employee).first()
+  # print(a.complaints)
+  # db.session.commit()
   print('committed')
   return "<h4>Hello World</h4><p>How are you?</p>"
 

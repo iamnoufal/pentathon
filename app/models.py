@@ -7,12 +7,12 @@ from .db import db
 #   warranty = db.Column(db.Integer)
 
 class User(db.Model):
-  __tablebname__ = "yfij"
+  __tablename__ = "users"
   id = db.Column(db.Integer, autoincrement = True, primary_key = True)
   user_id = db.Column(db.String, unique = True)
   name = db.Column(db.String, nullable = False)
   pwd = db.Column(db.String, nullable = True)
-  # complaints = db.relationship("Complaint", backref = "complaints")
+  complaints = db.relationship("Complaint", backref = "complaints")
 
 class Complaint(db.Model):
   __tablename__ = "complaints"
@@ -21,15 +21,15 @@ class Complaint(db.Model):
   created_on = db.Column(db.String, nullable = False)
   resolved = db.Column(db.Integer)
   resolved_on = db.Column(db.String)
-  # assigned_to = db.Column(db.Integer, db.ForeignKey('employees.id'))
+  assigned_to = db.Column(db.Integer, db.ForeignKey('employees.id'))
   # product_id = db.Column(db.Integer, db.ForeignKey('products.id'))
   user_id = db.Column(db.Integer, db.ForeignKey('users.id'))
 
-# class Employees(db.Model):
-#   __tablename__ = "employees"
-#   id = db.Column(db.Integer, autoincrement = True, primary_key = True)
-#   employee_id = db.Column(db.String, unique = True)
-#   name = db.Column(db.String, nullable = False)
-#   pwd = db.Column(db.String, nullable = True)
-#   complaints = db.relationship("Complaint", backref = "complaints")
+class Employee(db.Model):
+  __tablename__ = "employees"
+  id = db.Column(db.Integer, autoincrement = True, primary_key = True)
+  employee_id = db.Column(db.String, unique = True)
+  name = db.Column(db.String, nullable = False)
+  pwd = db.Column(db.String, nullable = True)
+  complaints = db.relationship("Complaint", backref = "complaints")
 
