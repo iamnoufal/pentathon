@@ -4,13 +4,19 @@
     <style>
         .container-fluid{
             width: 75%;
-            margin-right: auto;
-            margin-left: auto;
-            padding-top: 25px;
-            padding-bottom: 25px;
+            margin-right: 10px;
+            margin-left: 10px;
+            padding-top: 20px;
+            padding-bottom: 20px;
             border: 3px solid rgba(129, 125, 125, 0.34);
-            background: blanchedalmond;
+            background: beige;
             margin-bottom: 25px;
+        }
+        .container{
+            background: #7697be;
+            display: grid;
+            padding-top: 10px;
+            padding-bottom: 30px;
         }
 
     </style>
@@ -20,8 +26,9 @@
     <script src=”https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js” integrity=”sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo” crossorigin=”anonymous”></script>
     <script src=”https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js” integrity=”sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/” crossorigin=”anonymous”></script>
 <body>
+<div class="container">
     <nav class="navbar navbar-expand-lg bg-light">
-          <div class="container">
+          <div class="container-fluid">
             <a class="navbar-brand" href="#">Home</a>
               <a class="navbar-brand" href="#">Support</a>
               <a class="navbar-brand" href="#">My account</a>
@@ -46,19 +53,19 @@
             </div>
           </div>
         </nav>
-    <div class="container-fluid">
+    <div class="container">
         <h1>Check Product Warranty</h1>
-            <div class="container">
+            <div class="container-fluid">
                 <h2>Region of purchase:</h2>
                     <form method="post">
                         <div class="input-group mb-3">
-                            <span class="input-group-text" id="inputGroup-sizing-default">Enter Your Country:</span>
+                            <span class="input-group-text" >Enter Your Country:</span>
                             <div class="form-group">
                                 <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Country" required="true"></div>
                         </div>
                 <h2>Serial Number</h2>
                     <div class="input-group mb-3">
-                    <span class="input-group-text" id="inputGroup-sizing-default">Enter The Product Serial Number:</span>
+                    <span class="input-group-text" >Enter The Product Serial Number:</span>
                         <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="HU265BM18V">
                     </div>
                         <div align="right"><button><h2>Check Status</h2></button></div>
@@ -72,11 +79,11 @@
             <form method="POST">
             <div>
 
-                <span class="input-group-text" id="inputGroup-sizing-default">Name</span><br>
-                <input type="text"  aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="First Name">
+                <span class="input-group-text" >Name</span><br>
+                <input type="text"  aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="First Name" required = "True">
                 <input type="text" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Last Name"><br><br>
-                <span class="input-group-text" id="inputGroup-sizing-default">Email</span><br><br>
-                <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default"><br><br>
+                <span class="input-group-text">Email</span><br><br>
+                <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" required="True"><br><br>
                 <span class="input-group-text" id="inputGroup-sizing-default">Address</span><br><br>
                 <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Street Address"><br><br>
                 <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Address Line 2"><br><br>
@@ -93,7 +100,7 @@
                     <li><a class="dropdown-item" href="#">Something else here</a></li>
                   </ul>
                 </div><br>
-                 <input type="text" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Product ID"><br><br>
+                 <input type="text" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Product ID" required="True"><br><br>
                 <div class="form-check">
                     <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
                         <label class="form-check-label" for="flexCheckChecked">I agree to the privacy Policy</label>
@@ -104,5 +111,6 @@
             </div>
             </form>
     </div>
+</div>
 </body>
 </html>
