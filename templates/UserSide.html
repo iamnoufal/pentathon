@@ -50,28 +50,27 @@
         <h1>Check Product Warranty</h1>
             <div class="container">
                 <h2>Region of purchase:</h2>
-                    <form method="post">
+                    <!-- <form method="post"> -->
                         <div class="input-group mb-3">
                             <span class="input-group-text" id="inputGroup-sizing-default">Enter Your Country:</span>
                             <div class="form-group">
-                                <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Country" required="true"></div>
+                                <input type="text" id="prod_id" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Country" required="true"></div>
                         </div>
-                <h2>Serial Number</h2>
+                <!-- <h2>Serial Number</h2>
                     <div class="input-group mb-3">
                     <span class="input-group-text" id="inputGroup-sizing-default">Enter The Product Serial Number:</span>
                         <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="HU265BM18V">
-                    </div>
-                        <div align="right"><button><h2>Check Status</h2></button></div>
-                    </form>
+                    </div> -->
+                        <div class="text-end"><button onclick="checkProduct()"><h2>Check Status</h2></button></div>
+                    <!-- </form> -->
             </div>
         </div><br>
-    <div class="container-fluid" >
-        <h1 align = "center">Register For Warranty Service</h1>
-            <p  align = "center"><b>Please complete the below form to register for warranty service.</b></p>
+    <div class="container-fluid d-none register" >
+        <h1 class = "text-center">Register For Warranty Service</h1>
+            <p class = "text-center"><b>Please complete the below form to register for warranty service.</b></p>
             <h2>Register For Warranty Service</h2>
             <form method="POST">
             <div>
-
                 <span class="input-group-text" id="inputGroup-sizing-default">Name</span><br>
                 <input type="text"  aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="First Name">
                 <input type="text" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Last Name"><br><br>
@@ -104,5 +103,11 @@
             </div>
             </form>
     </div>
+
+    <script>
+      const checkProduct = () => {
+
+      }
+    </script>
 </body>
 </html>
