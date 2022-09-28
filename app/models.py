@@ -31,7 +31,7 @@ class Complaint(db.Model):
 class Employee(db.Model):
   __tablename__ = "employees"
   id = db.Column(db.Integer, autoincrement = True, primary_key = True)
-  employee_id = db.Column(db.String, unique = True)
+  employee_id = db.Column(db.String)
   name = db.Column(db.String, nullable = False)
   pwd = db.Column(db.String, nullable = True)
   assigned_complain = db.Column(db.Integer, db.ForeignKey('complaints.id'))

@@ -30,5 +30,3 @@ class ProductAPI(Resource):
       raise NotFoundError(code = 404, emsg = "Product Not Found")
     else:
       return product
-
-  
