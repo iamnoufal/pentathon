@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .container-fluid{
+            width: 75%;
+            margin-right: auto;
+            margin-left: auto;
+            padding-top: 25px;
+            padding-bottom: 25px;
+            border: 3px solid rgba(129, 125, 125, 0.34);
+            background: blanchedalmond;
+            margin-bottom: 25px;
+        }
+
+    </style>
+    <meta charset="UTF-8">
+    <title>Track Tracking</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <script src=”https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js” integrity=”sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo” crossorigin=”anonymous”></script>
+    <script src=”https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js” integrity=”sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/” crossorigin=”anonymous”></script>
+<body>
+    <nav class="navbar navbar-expand-lg bg-light">
+          <div class="container">
+            <a class="navbar-brand" href="#">Home</a>
+              <a class="navbar-brand" href="#">Support</a>
+              <a class="navbar-brand" href="#">My account</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Products</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Contact Us</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href='#'>My Account</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+    <div class="container-fluid">
+        <h1>Check Product Warranty</h1>
+            <div class="container">
+                <h2>Region of purchase:</h2>
+                    <form method="post">
+                        <div class="input-group mb-3">
+                            <span class="input-group-text" id="inputGroup-sizing-default">Enter Your Country:</span>
+                            <div class="form-group">
+                                <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Country" required="true"></div>
+                        </div>
+                <h2>Serial Number</h2>
+                    <div class="input-group mb-3">
+                    <span class="input-group-text" id="inputGroup-sizing-default">Enter The Product Serial Number:</span>
+                        <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="HU265BM18V">
+                    </div>
+                        <div align="right"><button><h2>Check Status</h2></button></div>
+                    </form>
+            </div>
+        </div><br>
+    <div class="container-fluid" >
+        <h1 align = "center">Register For Warranty Service</h1>
+            <p  align = "center"><b>Please complete the below form to register for warranty service.</b></p>
+            <h2>Register For Warranty Service</h2>
+            <form method="POST">
+            <div>
+
+                <span class="input-group-text" id="inputGroup-sizing-default">Name</span><br>
+                <input type="text"  aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="First Name">
+                <input type="text" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Last Name"><br><br>
+                <span class="input-group-text" id="inputGroup-sizing-default">Email</span><br><br>
+                <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default"><br><br>
+                <span class="input-group-text" id="inputGroup-sizing-default">Address</span><br><br>
+                <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Street Address"><br><br>
+                <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Address Line 2"><br><br>
+                <input type="text" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="City">
+                <input type="text"  aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Country"><br><br>
+                <button>Check Warranty Status</button><br><br>
+                <div class="dropdown">
+                  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="true">
+                    Select Product Type
+                  </button>
+                  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                  </ul>
+                </div><br>
+                 <input type="text" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Product ID"><br><br>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                        <label class="form-check-label" for="flexCheckChecked">I agree to the privacy Policy</label>
+                </div><br>
+                <div class="d-grid gap-2 col-6 mx-auto">
+                    <button style="background: deepskyblue; font-family:sans-serif">Submit</button>
+                </div>
+            </div>
+            </form>
+    </div>
+</body>
+</html>
