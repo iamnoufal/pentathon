@@ -13,7 +13,7 @@ def status():
 @app.route("/warranty/status/<product_id>")
 def statuscheck(product_id):
     try:
-        status = Complaint.query.filter_by(product_id=product_id).one()
+        status = Complaint.query.filter_by(product_id=product_id).all()
     except exc.NoResultFound:
         return render_template("status.html", status="")
     else:

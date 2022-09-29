@@ -70,26 +70,28 @@
       {% if status=="" %}
         <p>No product found. Please check your product ID</p>
       {% else %}
+       {% for i in status %}
         <div class="container-fluid register">
           <div class="row">
             <h5>Product ID</h5>
-            <p>{{ status.product_id }}</p>
+            <p>{{ i.product_id }}</p>
           </div>
           <div class="row">
             <h5>Claim registered on</h5>
-            <p>{{ status.created_on }}</p>
+            <p>{{ i.created_on }}</p>
           </div>
           <div class="row">
             <h5>Issue</h5>
-            <p>{{ status.issue }}</p>
+            <p>{{ i.issue }}</p>
           </div>
           <div class="row">
             <h5>Assigned to</h5>
-            <p>{{ status.assigned_to }}</p>
+            <p>{{ i.assigned_to }}</p>
           </div>
-          {% if status.resolved %}<p class="badge bg-success">Resolved</p>{% endif %}
+          {% if i.resolved %}<p class="badge bg-success">Resolved</p>{% endif %}
           
         </div>
+      {% endfor %}
       {% endif %}
       {% endif %}
   
