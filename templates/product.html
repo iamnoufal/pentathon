@@ -90,7 +90,7 @@
         <form action="/complaint" method="POST">
           <div>
             <span class="input-group-text" >Product ID</span><br>
-            <input type="text" disabled value="{{product.product_id}}" />
+            <input type="text" name="prodid" class="disabled" value="{{product.product_id}}" />
             <span class="input-group-text">Issue</span><br><br>
             <input type="text" class="form-control" name="desc" required="True"><br><br>
             <div class="d-grid gap-2 col-6 mx-auto">

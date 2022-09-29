@@ -26,9 +26,11 @@ def viewproduct(product_id):
 def postComplaint():
 	complaint = Complaint()
 	resp = request.form
+	print(resp)
 	complaint.issue = resp['desc']
 	complaint.created_on = str(datetime.today())[:16]
 	complaint.assigned_to = None
+	complaint.product_id = resp['prodid']
 	# complaint.user_id = session["user_id"]
 	# complaint.user_id = 1
 	try:

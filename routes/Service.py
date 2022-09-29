@@ -5,9 +5,18 @@ from sqlalchemy import exc
 from app.models import *
 
 
-@app.route("/service")
-def Assignservice():
-	return render_template("Service.html")
+@app.route("/warranty/status")
+def status():
+	return render_template("status.html", status = None)
+
+@app.route("/warranty/status/<product_id>")
+def statuscheck(product_id):
+	try:
+		status = Complaint.query.filter_by(product_id = product_id).one()
+	except exc.NoResultFound:
+		return render_template("status.html", status="")
+	else:
+		return render_template("status.html", status = status)
 
 
 @app.route("/Assignservice", methods=["POST"])
