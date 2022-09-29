@@ -60,6 +60,5 @@ class Caller(db.Model):
     user_phone = db.Column(db.Integer)
     user_pincode = db.Column(db.Integer, nullable=False)
     product_id = db.Column(db.String, unique=True)
-    reason = db.Column(db.String(300),nullable=False)
+    reason = db.Column(db.String(300), nullable=False)
     Warranty_num = db.Column(db.String, autoincrement=True, unique=True)
-
