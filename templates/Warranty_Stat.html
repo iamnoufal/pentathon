@@ -1,16 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <style>
+        .container-fluid {
+            background: beige ;
+            display: grid;
+            padding-top: 10px;
+            padding-bottom: 30px;
+        }
+    </style>
     <meta charset="UTF-8">
     <title>Track Tracking</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
     <script src=”https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js” integrity=”sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo” crossorigin=”anonymous”></script>
     
 <body>
+<div class = "container-fluid" >
     <center><h1>Check Warranty Status Of Your Product</h1></center><br>
+    <h3>Choose Product Type:</h3>
+    <div class="dropdown">
+            <select name="Product" id="Prodcut" class="form-control" >
+                <option><b>Choose Product</b></option>
+            <option value="ElectroNote">ElectroNote</option>
+            <option value="Sleepbooks">Sleepbooks</option>
+            <option value="bigbang">bigbang</option>
+            </select>
+    </div>
     <h3>Enter Warranty Number:</h3>
     <div class="input-group mb-3">
              <input size ="10" type="text" class="form-control" aria-label="number" aria-describedby="basic-addon1"></div>
     """Details Of Current Warranty Status of The Product"""
+</div>
 </body>
 </html>
