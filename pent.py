@@ -1,17 +1,17 @@
-from flask import Flask,render_template,request,session
+from flask import Flask, render_template, request, session
 from flask_sqlalchemy import SQLAlchemy
 import datetime
 import sqlite3
 from flask_session import Session
 
-
-app=Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI']='sqlite:///db123.sqlite3'
-app.config['SQLALCHEMY_TRACK_MODIFICATIONS']=False
+app = Flask(__name__)
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///db123.sqlite3'
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config["SESSION_PERMANENT"] = False
 app.config["SESSION_TYPE"] = "filesystem"
 Session(app)
-db=SQLAlchemy(app)
+db = SQLAlchemy(app)
+
 
 def get_db_connection():
     conn = sqlite3.connect('db.sqlite3')
@@ -36,11 +36,10 @@ class Complaint(db.Model):
     resolved = db.Column(db.Integer)
     resolved_on = db.Column(db.String)
     # assigned_to = db.Column(db.Integer, db.ForeignKey('employees.id'))
-    
+
     # product_id = db.Column(db.Integer, db.ForeignKey('products.id'))
     user_id = db.Column(db.Integer, db.ForeignKey('users.id'))
     emp_cmp_rel = db.relationship("Employee", backref="complaints")
-
 
 
 class Employee(db.Model):
@@ -51,7 +50,7 @@ class Employee(db.Model):
     pwd = db.Column(db.String, nullable=True)
     assigned_complain = db.Column(db.Integer, db.ForeignKey('complaints.id'))
 
-    
+
 if __name__ == '__main__':
     db.create_all()
-    app.run(debug=True,host="0.0.0.0")
+    app.run(debug=True, host="0.0.0.0")

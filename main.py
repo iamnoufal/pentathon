@@ -20,10 +20,11 @@ from routes.home import *
 from routes.complaint import *
 
 from apis.product import *
+
 api.add_resource(ProductAPI, "/api/product/<product_id>")
 
 if __name__ == "__main__":
-  app.run(
-    host="0.0.0.0", 
-    debug=True
-  )
+    app.run(
+        host="0.0.0.0",
+        debug=True
+    )
