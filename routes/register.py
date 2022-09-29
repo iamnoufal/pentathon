@@ -5,7 +5,7 @@ from sqlalchemy import exc
 from app.models import *
 
 
-@app.route("/warranty/Complain_register/<product_id>")
+@app.route("/warranty/Replacement_register/<product_id>")
 def statuscheck(product_id):
     try:
         status = Complaint.query.filter_by(product_id=product_id).one()
@@ -15,13 +15,13 @@ def statuscheck(product_id):
         return render_template("status.html", status=status)
 
 
-@app.route("/warranty/Complain_register", method=["POST"])
+@app.route("/warranty/Replacement_register", method=["POST"])
 def caller():
     caller = Caller()
     resp = request.form
-    resp.headers['fill to register Complain'] = '*'
-    caller.name = request.form['name']
-    caller.user_phone = request.form['phone']
-    caller.user_pincode = request.form['location']
+    resp.headers['fill to register Product Replacement'] = '*'
+    caller.Employee_name = request.form['name']
+    caller.Employee_id = request.form['id']
+    caller.user_id = request.form['user_id']
     caller.product_id = request.form['product_id']
     caller.reason = request.form['reason']

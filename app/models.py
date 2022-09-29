@@ -53,12 +53,11 @@ class Service(db.Model):
 
 
 class Caller(db.Model):
-    __tabelname__ = "Service"
+    __tabelname__ = "Replacement"
     id = db.Column(db.Integer, autoincrement=True, primary_key=True)
-    name = db.Column(db.String, nullable=False)
+    Employee_name = db.Column(db.String, nullable=False)
+    Employee_id = db.Column(db.String, unique=True)
     user_id = db.Column(db.String, unique=True)
-    user_phone = db.Column(db.Integer)
-    user_pincode = db.Column(db.Integer, nullable=False)
     product_id = db.Column(db.String, unique=True)
     reason = db.Column(db.String(300), nullable=False)
-    Warranty_num = db.Column(db.String, autoincrement=True, unique=True)
+    Replacement_num = db.Column(db.String, autoincrement=True, unique=True)
