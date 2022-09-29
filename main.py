@@ -18,6 +18,8 @@ app.app_context().push()
 
 from routes.home import *
 from routes.complaint import *
+from routes.service import *
+from routes.serviceAssign import *
 
 from apis.product import *
 
