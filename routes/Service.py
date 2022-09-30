@@ -31,6 +31,7 @@ def assignservice():
     service.product_Returndate = str(datetime.date())
     description = service.service_description.data
     service.service_description = request.get(description)
+
     try:
         db.session.add(service)
         db.session.commit()
